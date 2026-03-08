@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About – ErgoLite</title>
+  <meta name="description" content="ErgoLite is a free desk ergonomics resource for remote workers and home office professionals."/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root { --bg:#f7f4ef; --white:#fff; --ink:#1c1a17; --moss:#3b5e40; --sage:#6b9970; --light-sage:#eaf1ea; --terracotta:#c06040; --muted:#7a7570; --border:rgba(0,0,0,.08); }
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--bg); color:var(--ink); font-family:'DM Sans',sans-serif; line-height:1.6; min-height:100vh; display:flex; flex-direction:column; }
+
+    nav { background:var(--white); border-bottom:1px solid var(--border); padding:1.1rem 5vw; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:50; }
+    .logo { font-family:'Fraunces',serif; font-size:1.35rem; color:var(--moss); text-decoration:none; }
+    .logo span { color:var(--terracotta); }
+    .nav-links { display:flex; gap:1.8rem; }
+    .nav-links a { font-size:0.85rem; font-weight:500; color:var(--muted); text-decoration:none; transition:color .2s; }
+    .nav-links a:hover, .nav-links a.active { color:var(--moss); }
+
+    .page-hero { background:var(--white); border-bottom:1px solid var(--border); padding:3.5rem 5vw 3rem; }
+    .eyebrow { font-size:0.75rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--sage); margin-bottom:0.5rem; }
+    .page-hero h1 { font-family:'Fraunces',serif; font-size:clamp(1.8rem,3vw,2.8rem); letter-spacing:-0.025em; line-height:1.15; }
+    .page-hero p { margin-top:0.6rem; color:var(--muted); font-weight:300; font-size:0.95rem; max-width:500px; }
+
+    .content { max-width:680px; margin:3rem auto 4rem; padding:0 5vw; flex:1; }
+    .content h2 { font-family:'Fraunces',serif; font-size:1.35rem; color:var(--ink); margin:2.2rem 0 0.6rem; letter-spacing:-0.02em; }
+    .content p { color:#4a4640; font-weight:300; margin-bottom:1rem; line-height:1.8; font-size:0.95rem; }
+
+    .highlight-box { background:var(--light-sage); border-left:3px solid var(--moss); border-radius:0 10px 10px 0; padding:1.2rem 1.4rem; margin:1.8rem 0; }
+    .highlight-box p { color:var(--moss); margin:0; font-weight:400; font-size:0.92rem; }
+
+    .btn { display:inline-flex; align-items:center; gap:0.5rem; background:var(--terracotta); color:#fff; font-family:'DM Sans',sans-serif; font-size:0.95rem; font-weight:500; padding:0.85rem 2rem; border-radius:8px; text-decoration:none; transition:background .2s, transform .2s; margin-top:1rem; }
+    .btn:hover { background:#a84e30; transform:translateY(-2px); }
+
+    footer { background:var(--ink); color:rgba(255,255,255,.4); padding:1.8rem 5vw; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; font-size:0.82rem; margin-top:auto; }
+    .footer-links { display:flex; gap:1.4rem; flex-wrap:wrap; }
+    .footer-links a { color:rgba(255,255,255,.4); text-decoration:none; font-size:0.82rem; transition:color .2s; }
+    .footer-links a:hover { color:rgba(255,255,255,.8); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Ergo<span>Lite</span></a>
+  <div class="nav-links">
+    <a href="about.html" class="active">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="eyebrow">About the project</div>
+  <h1>What is ErgoLite?</h1>
+  <p>A free, practical resource to help remote workers build healthier, more comfortable workspaces.</p>
+</div>
+
+<div class="content">
+  <h2>Our mission</h2>
+  <p>ErgoLite was built with one simple goal: make ergonomics advice accessible to everyone. Most guides are either too technical or locked behind paywalls. We think good posture information should be free.</p>
+  <p>Whether you're working from a home office, a co-working space, or a kitchen table — the ErgoLite guide gives you the essentials to set up a healthier desk without spending money on equipment.</p>
+
+  <div class="highlight-box">
+    <p>💡 ErgoLite is a practice project built to explore Google Ads optimization for digital products. All resources are genuinely free.</p>
+  </div>
+
+  <h2>Who is this for?</h2>
+  <p>Remote workers, freelancers, students, and anyone who spends several hours a day at a desk. You don't need fancy equipment or a standing desk. The guide works with whatever setup you already have.</p>
+
+  <h2>What's inside the guide?</h2>
+  <p>The ErgoLite guide covers chair height and lumbar positioning, monitor placement and eye distance, keyboard and mouse ergonomics, lighting tips to reduce eye strain, and a 10-minute daily reset routine — all in plain language, no jargon.</p>
+
+  <a href="index.html" class="btn">↓ &nbsp;Get the Free Guide</a>
+</div>
+
+<footer>
+  <a href="index.html" style="font-family:'Fraunces',serif; color:rgba(255,255,255,.7); text-decoration:none; font-size:1rem;">Ergo<span style="color:#c06040">Lite</span></a>
+  <div class="footer-links">
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+  <span>© 2025 ErgoLite. Free forever.</span>
+</footer>
+
+</body>
+</html>
