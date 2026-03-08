@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ErgoLite – Fix Your Desk Posture in 10 Minutes</title>
+  <meta name="description" content="Free ergonomics guide for remote workers. Reduce back pain, improve posture, and boost productivity at your desk."/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #f7f4ef;
+      --white: #ffffff;
+      --ink: #1c1a17;
+      --moss: #3b5e40;
+      --sage: #6b9970;
+      --light-sage: #eaf1ea;
+      --sand: #e8dfd0;
+      --terracotta: #c06040;
+      --muted: #7a7570;
+      --border: rgba(0,0,0,0.08);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 1.1rem 5vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .logo { font-family: 'Fraunces', serif; font-size: 1.35rem; color: var(--moss); text-decoration: none; }
+    .logo span { color: var(--terracotta); }
+    .nav-links { display: flex; gap: 1.8rem; }
+    .nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--muted); text-decoration: none; transition: color .2s; }
+    .nav-links a:hover { color: var(--moss); }
+
+    /* HERO */
+    .hero {
+      background: var(--white);
+      padding: 5rem 5vw 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px; left: 50%;
+      transform: translateX(-50%);
+      width: 700px; height: 400px;
+      background: radial-gradient(ellipse, #d8ead8 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: var(--light-sage);
+      color: var(--moss);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.35rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1.6rem;
+      animation: fadeUp .5s ease both;
+    }
+    h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2.4rem, 5.5vw, 4rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      max-width: 720px;
+      margin: 0 auto 1.4rem;
+      animation: fadeUp .6s .05s ease both;
+    }
+    h1 em { font-style: italic; color: var(--terracotta); }
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto 2.4rem;
+      font-weight: 300;
+      animation: fadeUp .6s .1s ease both;
+    }
+    .hero-cta { animation: fadeUp .6s .18s ease both; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--terracotta);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 0.95rem 2.2rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background .2s, transform .2s, box-shadow .2s;
+      box-shadow: 0 5px 20px rgba(192,96,64,.28);
+    }
+    .btn:hover { background: #a84e30; transform: translateY(-2px); box-shadow: 0 10px 28px rgba(192,96,64,.35); }
+    .hero-note { margin-top: 1rem; font-size: 0.8rem; color: #aaa; animation: fadeUp .6s .24s ease both; }
+
+    /* BENEFITS */
+    .benefits {
+      padding: 5rem 5vw;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .section-label {
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 0.7rem;
+    }
+    .benefits h2 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      text-align: center;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+      margin-bottom: 3rem;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.4rem;
+    }
+    .benefit-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.8rem;
+      transition: transform .25s, box-shadow .25s;
+    }
+    .benefit-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,0,0,.08); }
+    .benefit-icon {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .benefit-card h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.15rem;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.015em;
+    }
+    .benefit-card p { font-size: 0.88rem; color: var(--muted); font-weight: 300; line-height: 1.65; }
+
+    /* FINAL CTA STRIP */
+    .cta-strip {
+      background: var(--moss);
+      padding: 4rem 5vw;
+      text-align: center;
+    }
+    .cta-strip h2 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      color: #fff;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.8rem;
+    }
+    .cta-strip p { color: rgba(255,255,255,.65); font-size: 0.95rem; font-weight: 300; margin-bottom: 2rem; }
+    .btn-white {
+      background: #fff;
+      color: var(--moss);
+      box-shadow: 0 5px 20px rgba(0,0,0,.15);
+    }
+    .btn-white:hover { background: #f0f0ee; transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,.4);
+      padding: 1.8rem 5vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.82rem;
+    }
+    footer .logo { color: rgba(255,255,255,.7); font-size: 1rem; }
+    .footer-links { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+    .footer-links a { color: rgba(255,255,255,.4); text-decoration: none; font-size: 0.82rem; transition: color .2s; }
+    .footer-links a:hover { color: rgba(255,255,255,.8); }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+    .reveal { opacity:0; transform:translateY(18px); transition: opacity .55s ease, transform .55s ease; }
+    .reveal.in { opacity:1; transform:translateY(0); }
+
+    @media (max-width: 700px) {
+      .benefits-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Ergo<span>Lite</span></a>
+  <div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-tag">Free Download · No Sign-up Needed</div>
+  <h1>Fix Your Desk Posture<br>in <em>10 Minutes</em></h1>
+  <p class="hero-desc">Download the free ergonomics guide used by remote workers to reduce back pain, improve focus, and set up a healthier desk — starting today.</p>
+  <div class="hero-cta">
+    <a href="#" class="btn">
+      ↓ &nbsp;Download Free Ergonomics Guide
+    </a>
+  </div>
+  <p class="hero-note">PDF · 30 pages · Completely free · Always</p>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits">
+  <div class="section-label reveal">What you'll get</div>
+  <h2 class="reveal">Three changes. Real results.</h2>
+  <div class="benefits-grid">
+    <div class="benefit-card reveal">
+      <span class="benefit-icon">🧘</span>
+      <h3>Reduce Back Pain</h3>
+      <p>Fix the exact chair height, lumbar support, and monitor angle that cause most desk-related back and neck pain. Simple, no-equipment fixes.</p>
+    </div>
+    <div class="benefit-card reveal" style="transition-delay:.08s">
+      <span class="benefit-icon">⚡</span>
+      <h3>Improve Productivity</h3>
+      <p>When you're not fighting discomfort, your focus improves naturally. Better posture leads to longer, more energized work sessions.</p>
+    </div>
+    <div class="benefit-card reveal" style="transition-delay:.16s">
+      <span class="benefit-icon">🪑</span>
+      <h3>Better Desk Posture</h3>
+      <p>Learn the ergonomic principles behind a proper desk setup — monitor distance, keyboard placement, and the 90° sitting rule.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-strip reveal">
+  <h2>Get the Free Ergonomics Guide</h2>
+  <p>No email required. Instant PDF download. Start fixing your posture today.</p>
+  <a href="#" class="btn btn-white">↓ &nbsp;Download Free Guide</a>
+</section>
+
+<footer>
+  <a href="index.html" class="logo" style="font-family:'Fraunces',serif;">Ergo<span style="color:#c06040">Lite</span></a>
+  <div class="footer-links">
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+  <span>© 2025 ErgoLite. Free forever.</span>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(els => els.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); }}), { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
