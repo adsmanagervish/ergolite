@@ -1,0 +1,200 @@
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap');
+
+  .erg-page {
+    font-family: 'DM Sans', sans-serif;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: #f5f7f4;
+    border-radius: var(--border-radius-lg);
+  }
+
+  .erg-bg-line {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    opacity: 0.08;
+    color: #4a6e52;
+  }
+
+  .erg-check {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #dce8dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    animation: popIn 0.5s cubic-bezier(0.34,1.56,0.64,1) both;
+  }
+
+  .erg-label {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #7a9b80;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+    animation: fadeUp 0.5s 0.1s ease both;
+  }
+
+  .erg-heading {
+    font-family: 'DM Serif Display', serif;
+    font-size: 38px;
+    font-weight: 400;
+    color: #2c3f2e;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+    animation: fadeUp 0.5s 0.2s ease both;
+  }
+
+  .erg-heading em {
+    font-style: italic;
+    color: #5a7d5e;
+  }
+
+  .erg-sub {
+    font-size: 15px;
+    color: #6b7c6c;
+    font-weight: 300;
+    max-width: 360px;
+    line-height: 1.65;
+    margin: 0 auto 2.5rem;
+    animation: fadeUp 0.5s 0.3s ease both;
+  }
+
+  .erg-divider {
+    width: 40px;
+    height: 1px;
+    background: #c2d5c2;
+    margin: 0 auto 2.5rem;
+    animation: fadeUp 0.5s 0.35s ease both;
+  }
+
+  .erg-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 520px;
+    width: 100%;
+    margin: 0 auto 2.5rem;
+    animation: fadeUp 0.5s 0.4s ease both;
+  }
+
+  .erg-card {
+    background: #ffffff;
+    border: 0.5px solid #c8d8c8;
+    border-radius: var(--border-radius-lg);
+    padding: 1rem 0.75rem;
+    text-align: center;
+  }
+
+  .erg-card-icon {
+    font-size: 18px;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  .erg-card-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: #2c3f2e;
+    margin: 0 0 3px;
+  }
+
+  .erg-card-desc {
+    font-size: 11px;
+    color: #8fa48f;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .erg-btn {
+    display: inline-block;
+    padding: 11px 32px;
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    background: #4a6e52;
+    cursor: pointer;
+    transition: background 0.15s;
+    animation: fadeUp 0.5s 0.5s ease both;
+  }
+
+  .erg-btn:hover {
+    background: #3d5d45;
+  }
+
+  .erg-footer-note {
+    margin-top: 2rem;
+    font-size: 12px;
+    color: #9aad9a;
+    animation: fadeUp 0.5s 0.6s ease both;
+  }
+
+  @keyframes popIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<div class="erg-page">
+  <svg class="erg-bg-line" viewBox="0 0 680 520" xmlns="http://www.w3.org/2000/svg">
+    <line x1="0" y1="130" x2="680" y2="130" stroke="currentColor" stroke-width="0.8"/>
+    <line x1="0" y1="390" x2="680" y2="390" stroke="currentColor" stroke-width="0.8"/>
+    <line x1="200" y1="0" x2="200" y2="520" stroke="currentColor" stroke-width="0.8"/>
+    <line x1="480" y1="0" x2="480" y2="520" stroke="currentColor" stroke-width="0.8"/>
+  </svg>
+
+  <div class="erg-check">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polyline points="4,13 9,18 20,7" stroke="#4a6e52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <p class="erg-label">Ergolite Guide</p>
+  <h1 class="erg-heading">Thank you for<br><em>downloading the guide</em></h1>
+  <p class="erg-sub">Your guide is on its way. You're one step closer to a workspace that works for your body — not against it.</p>
+
+  <div class="erg-divider"></div>
+
+  <div class="erg-cards">
+    <div class="erg-card">
+      <span class="erg-card-icon">📐</span>
+      <p class="erg-card-title">Posture basics</p>
+      <p class="erg-card-desc">Covered in chapter 1</p>
+    </div>
+    <div class="erg-card">
+      <span class="erg-card-icon">🪑</span>
+      <p class="erg-card-title">Chair checklist</p>
+      <p class="erg-card-desc">What to look for</p>
+    </div>
+    <div class="erg-card">
+      <span class="erg-card-icon">💡</span>
+      <p class="erg-card-title">Smart picks</p>
+      <p class="erg-card-desc">Best value options</p>
+    </div>
+  </div>
+
+  <button class="erg-btn">Download the guide</button>
+
+  <p class="erg-footer-note">Questions? We're always here — ergolite.guide</p>
+</div>
